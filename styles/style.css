@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Esto es para importar una fuente de Google Fonts, en este caso se está importando la fuente Krona One y Montserrat */
+
+* {
+    /* Los asteriscos son un selector universal, afecta a todos los elementos de la página */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* En este caso se está eliminando el margen y el padding por defecto de los elementos de la página */
+/* Esto lo hacemos para que no haya espacios entre los elementos y no se desconfigure la página */
+/* Puede que al usar un navegador, este aplique un margen o padding por defecto a los elementos, por eso es importante resetearlo */
+/* El empleo de reset.css es una buena práctica para evitar problemas de compatibilidad entre navegadores, en este caso se está haciendo manualmente */
+/* Lo que se logra con box-sizing: border-box es que el padding y el borde no se sumen al ancho del elemento, sino que se resten */
+
+/* =========================== GENERAL ============================= */
+:root{
+    --color_primario: #FF4191;
+    --color_secundario: #E90074;
+    --color_fondo: #000000;
+    --color_fondo_hover: #272727;
+    --color_parrafo: #FFF078;
+
+    --fuente_titulo: 'Krona One', sans-serif;
+    --fuente_parrafo: 'Montserrat', sans-serif;
+}
+
+/* ¿Qué son las unidades de medida REM? */
+/* REM es una unidad de medida que se basa en el tamaño de la fuente del elemento raíz (root), en este caso el body */
+/* Si el tamaño de la fuente del body es de 16px, 1rem es igual a 16px */
+/* Si el tamaño de la fuente del body es de 24px, 2rem es igual a 48px */
+/* Un ejemplo de implementacion de REM es el siguiente: */
+/* Generalmente, en una pagina web, el tamaño de fuente es de 16px, por lo que 1rem es igual a 16px */
+
+/* =========================== Body ============================= */
+body {
+    background-color:var(--color_fondo);
+    color: var(--color_parrafo);
+    /*height: 100vh; Antes lo usabamos, pero como ahora usamos un footer, ya no es necesario */
+    box-sizing: border-box;
+    /* Esto es para que el padding y el borde no se sumen al ancho del elemento. Tambien lo hacemos para que los elementos no se desborden de la ventana (o del body) */
+}
+
+
+/* =========================== Header ============================= */
+.menu_nav {
+    padding-left: 15%;
+    /* Esto es para que haya un padding de 360px a la izquierda */
+    padding-top: 2%;
+    display: flex;
+    gap: 80px;
+}
+
+.menu__link {
+    font-family: var(--fuente_parrafo);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color_primario);
+    text-decoration: none;
+}
+.menu__link:hover {
+    color: var(--color_secundario);
+}
+
+
+/* =========================== Main ============================= */
+.presentacion {
+    display: flex;
+    /* Esto es para que los elementos se alineen en fila */
+    /* para cambiar a columnas: flex-direction: column; */
+    align-items: center;
+    /* Esto es para que los elementos se alineen en el centro, pero no respecto a la página, sino respecto al centro del elemento más grande (NO PADRE) */
+    padding: 6.25% 15%;/* Esto es para que haya un margen del 4% respecto a la página */
+    /* El porcentaje es respecto al tamaño del body */
+    gap: 60px;
+}
+
+.presentacion__contenido {
+    width: 50%;
+    /* Esto es para que el ancho del elemento sea de 615px */
+    display: flex;
+    /* flex, es para que los elementos se alineen en fila o columna */
+    flex-direction: column;
+    /* Esto es para que los elementos se alineen en columna */
+    gap: 40px;
+    /* Esto es para que haya un espacio de 40px entre los elementos */
+}
+
+.presentacion__contenido__titulo {
+    font-family: var(--fuente_titulo);
+    font-size: 2.25rem;
+}
+
+.titulo_destaque {
+    /* Esto es una clase, se representa a traves de un punto y puede ser reutilizada */
+    color: var(--color_primario);
+}
+.titulo_destaque:hover {
+    /* :hover es un pseudo selector, se activa cuando el cursor pasa por encima del elemento */
+    color: var(--color_secundario);
+}
+
+.presentacion__contenido__parrafo {
+    font-family: var(--fuente_parrafo);
+    font-size: 1.5rem;
+}
+
+.presentacion__contenido__enlaces {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    /* Esto es para que los elementos se alineen en el centro, pero no respecto a la página, sino respecto al centro del elemento más grande (NO PADRE) */
+    gap: 32px;
+    /* Esto es para que haya un espacio de 32px entre los elementos */
+}
+
+.presentacion__contenido__imagen{
+    width: 40%;
+}
+
+.presentacion__enlaces__subtitulo {
+    font-family: var(--fuente_titulo);
+    font-size: 1.5rem;
+    font-weight: 400;
+    /* font-weight es para el grosor de la fuente. 400 es el valor por defecto */
+}
+
+.link {
+    width: 50%;
+    /* Esto es para que el ancho del elemento sea de 280px */
+    height: 68px;
+    padding: 16px 0px;
+    /* Esto es para que haya un padding de 21.5px arriba y abajo y 0px a los lados */
+    text-align: center;
+    font-family: var(--fuente_parrafo);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color_parrafo);
+    background-color: var(--color_fondo);
+    text-decoration: none;
+    /* Esto es para que no haya subrayado en los enlaces */
+    border: 2px solid;
+    /* Esto es para que haya un borde de 2px, solid es el tipo de borde */
+    border-color: var(--color_primario);
+    border-radius: 8px;
+    /* Esto es para que haya un borde redondeado */
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+.link:hover {
+    background-color: var(--color_fondo_hover);
+    border-color: var(--color_secundario);
+}
+
+/* :hover es un pseudo selector, se activa cuando el cursor pasa por encima del elemento */
+/* Sirve no solo para cambiar el color de un enlace, sino para cambiar cualquier propiedad de un elemento */
+
+
+/* =========================== Footer ============================= */
+.footer {
+    background-color: var(--color_primario);
+    padding: 24px;
+    /* Esto es para que haya un padding de 24px arriba y abajo y 0px a los lados */
+    color: var(--color_parrafo);
+    text-align: center;
+    font-family: var(--fuente_parrafo);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/* =========================== Media Queries ============================= */
+/* Las media queries son reglas que se aplican a un documento CSS dependiendo de las características del dispositivo */
+/* Se usan para hacer que la página sea responsive */
+/* Emplearemos la propiedad @media para definir las media queries */
+@media(max-width:1200px){
+    .presentacion {
+        flex-direction: column-reverse;
+        /* Esto es para que los elementos se alineen en columna */
+        padding: 6.5% 8%;
+        /* Esto es para que haya un margen del 4% respecto a la página */
+    }
+
+    .presentacion__contenido {
+        width: 100%;
+        /* Esto es para que el ancho del elemento sea del 100% */
+    }
+
+    .presentacion__contenido__imagen{
+        width: 60%;
+    }
+
+    .menu_nav {
+        padding-left: 0;
+        /* Esto es para que no haya un padding de 360px a la izquierda */
+        padding-top: 10%;
+        justify-content: center;
+    }
+
+    .link {
+        width: 75%;
+        /* Esto es para que el ancho del elemento sea del 100% */
+    }
+}
+
+@media (max-width:450px){
+    .link {
+        width: 100%;
+        /* Esto es para que el ancho del elemento sea del 100% */
+    }
+}

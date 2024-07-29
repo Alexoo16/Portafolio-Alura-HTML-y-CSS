@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Esta linea de codigo sirve para indicar el idioma de la pagina web -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Esta linea de codigo sirve para indicar el tipo de codificacion de la pagina web -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Esta linea de codigo sirve para indicar el tamaño de la pagina web -->
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="styles/style.css"> <!-- Esta linea de codigo sirve para enlazar el archivo de estilos de la pagina web -->
+</head>
+
+<body>
+    <header class="header">
+        <nav class="menu_nav"> <!-- Esta etiqueta sirve para indicar una barra de navegacion -->
+            <a href="index.html" class="menu__link">Home</a> <!-- El parametro href sirve para indicar la ruta de la pagina a la que se redirigira el link -->
+            <a href="about_me.html" class="menu__link">Sobre mí</a>
+        </nav>
+    </header>
+
+    <main class="presentacion">
+        <section class="presentacion__contenido"> <!-- Esta etiqueta sirve para indicar una seccion de la pagina web -->
+            <!-- Section se tomara como un elemento de bloque, es decir, se mostrara en una linea diferente -->
+            <h1 class="presentacion__contenido__titulo">Eleve tu negocio digital a otro nivel <strong class="titulo_destaque">con un Front-end de calidad!</strong></h1> <!-- El parametro class sirve para indicar una clase de estilo en el texto -->
+            <p class="presentacion__contenido__parrafo">¡Hola! Soy Ana García, desarrolladora Front-end con especialización en React, HTML y CSS.
+            Ayudo a pequeños negocios y diseñadores a llevar a cabo buenas ideas. ¿Hablamos?</p>
+            <div class="presentacion__contenido__enlaces">
+                <!-- Solo se puede usar un h1 por pagina, pero si se quiere usar mas de un h1 se puede usar h2, h3, h4, h5, h6 -->
+                <h2 class="presentacion__enlaces__subtitulo">Accede a mis redes:</h2>
+                <a class="link" href="https://www.instagram.com"><img src="assets/instagram.png" alt=""> Instagram</a>
+                <a class="link" href="https://github.com"><img src="assets/github.png" alt=""> GitHub</a>
+                <a class="link" href="https://www.linkedin.com"><img src="assets/linkedin.png" alt=""> LinkedIn</a>
+            </div>
+        </section>
+        <img class="presentacion__contenido__imagen" src="assets/Imagem.png" alt="Imagen_Ana_Garcia"> <!-- Los parametros src y alt sirven para indicar la ruta de la imagen y la descripcion de la imagen respectivamente -->
+    </main>
+
+    <footer class="footer">
+        <p>Desarrollado por Alexoo_16</p>
+    </footer>
+</body>
+
+</html>
